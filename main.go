@@ -1,8 +1,10 @@
 package main
 
-import "syscall/js"
+import (
+	"syscall/js"
+)
 
 func main() {
-	const hello = "Hello, WebAssembly!"
-	js.Global().Set("hello", hello)
+	listNum := js.TypedArrayOf([]int32{1, 2, 3})
+	js.Global().Set("listNum", listNum)
 }

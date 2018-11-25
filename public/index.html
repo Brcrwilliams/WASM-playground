@@ -7,7 +7,7 @@
 				const go = new Go();
 				const result = await WebAssembly.instantiateStreaming(fetch("main.wasm"), go.importObject);
 				await go.run(result.instance);
-				console.log(hello);
+				console.log(listNum); // Int32Array(3) [1, 2, 3]
 			})();
 		</script>
 	</head>
